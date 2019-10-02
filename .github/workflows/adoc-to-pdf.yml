@@ -1,0 +1,31 @@
+name: AsciiDoc to PDF
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  asciidoc_to_pdf:
+    name: AsciiDoc to PDF
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v1
+      - name: Set up Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.3'
+      - name: Install AsciiDoctor PDF
+        run: gem install asciidoctor-pdf --pre
+      - name: Install required dependencies
+        run: gem install rouge
+      - name: Convert AsciiDoc to PDF
+        run: asciidoctor-pdf README.adoc
+      - name: Rename generated PDF
+        run: mv README.pdf python2nodemcu.pdf
+      - name: Publish PDF
+        uses: actions/upload-artifact@master
+        with:
+          name: python2nodemcu
+          path: python2nodemcu.pdf

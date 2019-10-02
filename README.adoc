@@ -1,9 +1,11 @@
-:toc:       macro
-:toclevels: 2
+:source-highlighter: rouge
+:toc:                macro
+:toclevels:          2
 :toc-title:
 
 image:https://img.shields.io/github/license/pixelstuermer/python2nodemcu[link=LICENSE]
 image:https://img.shields.io/badge/python-3.7.4-blue[link=https://www.python.org/downloads/release/python-374/]
+image:https://github.com/pixelstuermer/python2nodemcu/workflows/AsciiDoc%20to%20PDF/badge.svg[link=https://github.com/pixelstuermer/python2nodemcu/actions]
 
 [discrete]
 = python2nodemcu :snake:
