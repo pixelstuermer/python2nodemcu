@@ -8,6 +8,18 @@ image:https://img.shields.io/badge/python-3.7.4-blue[python]
 [discrete]
 = python2nodemcu :snake:
 
-Tbd.
+The web is full of tutorials and documentation on how to develop Lua or C++ scripts for https://www.espressif.com/en/products/hardware[ESP microcontrollers] (and boards building on it) and flashing them with the https://www.arduino.cc/en/main/software[Arduino IDE].
+But when turning away from this out-of-the-box toolset, the support is getting sparse but still available.
+
+So things get a bit trickier when replacing the language with Python and avoiding the Arduino IDE.
+IMHO, support and documentation is indeed still available but not as satisfying as expected.
+I somehow found it puzzling that developing and uploading Python scripts for those controllers seems not to be that famous or at least not so well documented.
+
+While researching and trying different things I consulted several resources because none of them was, what I would call, an end-to-end documentation.
+This document therefore tries to summarize and provide the lessons I've learned from it.
+Please see the following table of contents to get insights of the structure and subjects.
+Please also note that it is based on MacOS Sierra and the https://www.nodemcu.com/index_en.html[NodeMcu board].
 
 toc::[]
+
+To be done – work in Progress.
