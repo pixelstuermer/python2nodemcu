@@ -2,8 +2,8 @@
 :toclevels: 2
 :toc-title:
 
-image:https://img.shields.io/github/license/pixelstuermer/python2nodemcu[license]
-image:https://img.shields.io/badge/python-3.7.4-blue[python]
+image:https://img.shields.io/github/license/pixelstuermer/python2nodemcu[link=LICENSE]
+image:https://img.shields.io/badge/python-3.7.4-blue[link=https://www.python.org/downloads/release/python-374/]
 
 [discrete]
 = python2nodemcu :snake:
