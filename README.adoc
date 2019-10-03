@@ -68,12 +68,42 @@ If not, please install Python 3 as described https://www.python.org/downloads/re
 === Driver
 
 Next, the appropriate SiLabs driver must be installed to enable serial USB-to-UART communication with the microcontroller.
-Depending on Your OS, Please download one of these https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers[drivers] and install it.
+Depending on Your operating system, Please download one of these https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers[drivers] and install it.
 Your machine should now be able to recognize the board after connecting it via USB.
 
 Nevertheless You won't see the device on first sight, which leads us to the next chapter.
 
 === Finding the Device File
+
+Device files are a concept to separate client programs from specific device drivers (which then interact with the actual devices).
+So they provide interfaces to communicate with devices (which they represent), such as the microcontroller.
+Hence, they can be seen as portals to the device drivers and therefore to the devices themselves.
+
+They also follow the unix principle of everything being a file.
+Writing data to the device file means passing data to the device driver which then sends the data to the actual physical device.
+
+The device files are located in the `/dev` directory, but We still need to figure out which device file represents the microcontroller.
+This differs according to the installed driver and the operating system.
+
+Executing the following command will only list a subset of device files, of which one should represent the microcontroller in question:
+
+```sh
+ls -la /dev/tty.*
+```
+
+Plugging and unplugging the physical device via USB while executing the command should therefore result in different outputs.
+Like this, the device file of the microcontroller can be easily discovered.
+
+The result will then be similar to this:
+
+```sh
+...
+/dev/tty.wchusbserialfd130
+...
+```
+
+Please note that Your device file might have a different name.
+Therefore, please replace `/dev/tty.wchusbserialfd130` in the following code examples with Your own device file name.
 
 === Firmware
 
