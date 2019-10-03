@@ -9,7 +9,7 @@ image:https://github.com/pixelstuermer/python2nodemcu/workflows/AsciiDoc%20to%20
 
 image:https://img.shields.io/badge/python-3.7.4-blue[link=https://www.python.org/downloads/release/python-374]
 image:https://img.shields.io/badge/platform-MacOS_(Sierra)-blue[]
-image:https://img.shields.io/badge/board-NodeMcu-blue[link=https://www.nodemcu.com]
+image:https://img.shields.io/badge/board-NodeMcu-blue[link=https://www.nodemcu.com/index_en.html]
 
 [discrete]
 = python2nodemcu :snake:
@@ -26,7 +26,7 @@ This document therefore tries to summarize and provide the lessons I've learned 
 Furthermore, it is an approach to get started with hacking as fast as possible, instead of entering too many technical depths.
 
 Please see the following table of contents to get insights of the structure and subjects.
-Please also note that it is based on MacOS (Sierra), https://www.python.org/downloads/release/python-374[Python 3.7.4] and the https://www.nodemcu.com[NodeMcu board].
+Please also note that it is based on MacOS (Sierra), https://www.python.org/downloads/release/python-374[Python 3.7.4] and the https://www.nodemcu.com/index_en.html[NodeMcu board].
 Moreover, the Python packages are installed using the manual fashion.
 Nevertheless, there are other options to install packages, such as https://pypi.org/project/pip/[Pip].
 
