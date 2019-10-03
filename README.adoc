@@ -47,7 +47,24 @@ Due to the low cost and easy setup it is very well suited for IoT projects.
 
 == Prerequisites
 
+The following sections give an overview of the requirements, before starting with developing and uploading.
+
 === Python
+
+Please run one of the following commands to find out if Python 3 is alrady installed on your machine:
+
+```sh
+python --version
+python3 --version
+```
+
+The output should look somehow like the following:
+
+```sh
+Python 3.7.4
+```
+
+If not, please install Python 3 as described https://www.python.org/downloads/release/python-374[here].
 
 === Driver
 
