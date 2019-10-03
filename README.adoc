@@ -32,4 +32,47 @@ Nevertheless, there are other options to install packages, such as https://pypi.
 
 toc::[]
 
-To be done – work in Progress.
+== Basic Understanding
+
+The NodeMcu board is based on the ESP8266 microcontroller and contains required components such as CPU, RAM and the TCP/IP stack (enabling WiFi network connections).
+The System-on-a-chip adds several convenient features, such as more GPIO pins or a micro USB interface.
+It is therefore a https://github.com/nodemcu/nodemcu-devkit-v1.0[hardware development kit] for the NodeMcu firmware.
+But as just mentioned, it is also an https://github.com/nodemcu/nodemcu-firmware[open source firmware] which runs on the board by default, enabling You to program it using Lua or C++.
+
+The commands are sent to the board via a device file, using the serial UART interface.
+For an appropriate power supply, please use proper USB cables and avoid USB hubs.
+
+The development kit all in all enables You to, for example, address the GPIO pins and it allows communication with connected components, such as sensors (in) and actuators (out).
+Due to the low cost and easy setup it is very well suited for IoT projects.
+
+== Prerequisites
+
+=== Python
+
+=== Driver
+
+=== Firmware
+
+=== Finding the Device File
+
+=== Access to the Serial Port
+
+== Start Hacking
+
+=== Flashing the Firmware
+
+=== Connecting to the Board
+
+=== Running Commands on the Board
+
+=== Developing Scripts
+
+=== Uploading Scripts
+
+== Samples
+
+=== Counter
+
+=== LED
+
+== Links and Resources
