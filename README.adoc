@@ -4,10 +4,12 @@
 :toc-title:
 
 image:https://img.shields.io/github/license/pixelstuermer/python2nodemcu[link=LICENSE]
+image:https://img.shields.io/github/v/release/pixelstuermer/python2nodemcu[link=https://github.com/pixelstuermer/python2nodemcu/releases/latest]
+image:https://github.com/pixelstuermer/python2nodemcu/workflows/AsciiDoc%20to%20PDF/badge.svg[link=https://github.com/pixelstuermer/python2nodemcu/actions]
+
 image:https://img.shields.io/badge/python-3.7.4-blue[link=https://www.python.org/downloads/release/python-374]
 image:https://img.shields.io/badge/platform-MacOS_(Sierra)-blue[]
 image:https://img.shields.io/badge/board-NodeMcu-blue[link=https://www.nodemcu.com]
-image:https://github.com/pixelstuermer/python2nodemcu/workflows/AsciiDoc%20to%20PDF/badge.svg[link=https://github.com/pixelstuermer/python2nodemcu/actions]
 
 [discrete]
 = python2nodemcu :snake:
