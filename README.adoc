@@ -27,6 +27,8 @@ Furthermore, it is an approach to get started with hacking as fast as possible, 
 
 Please see the following table of contents to get insights of the structure and subjects.
 Please also note that it is based on MacOS (Sierra), https://www.python.org/downloads/release/python-374[Python 3.7.4] and the https://www.nodemcu.com[NodeMcu board].
+Moreover, the Python packages are installed using the manual fashion.
+Nevertheless, there are other options to install packages, such as https://pypi.org/project/pip/[Pip].
 
 toc::[]
 
