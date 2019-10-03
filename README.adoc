@@ -5,8 +5,7 @@
 
 image:https://img.shields.io/github/license/pixelstuermer/python2nodemcu[link=LICENSE]
 image:https://img.shields.io/github/v/release/pixelstuermer/python2nodemcu[link=https://github.com/pixelstuermer/python2nodemcu/releases/latest]
-image:https://github.com/pixelstuermer/python2nodemcu/workflows/AsciiDoc%20to%20PDF/badge.svg[link=https://github.com/pixelstuermer/python2nodemcu/actions]
-
+image:https://github.com/pixelstuermer/python2nodemcu/workflows/AsciiDoc%20to%20PDF/badge.svg[link=https://github.com/pixelstuermer/python2nodemcu/actions] +
 image:https://img.shields.io/badge/python-3.7.4-blue[link=https://www.python.org/downloads/release/python-374]
 image:https://img.shields.io/badge/platform-MacOS_(Sierra)-blue[]
 image:https://img.shields.io/badge/board-NodeMcu-blue[link=https://www.nodemcu.com/index_en.html]
@@ -51,7 +50,7 @@ The following sections give an overview of the requirements, before starting wit
 
 === Python
 
-Please run one of the following commands to find out if Python 3 is alrady installed on your machine:
+Please run one of the following commands to find out if Python 3 is already installed on Your machine:
 
 ```sh
 python --version
@@ -68,9 +67,15 @@ If not, please install Python 3 as described https://www.python.org/downloads/re
 
 === Driver
 
-=== Firmware
+Next, the appropriate SiLabs driver must be installed to enable serial USB-to-UART communication with the microcontroller.
+Depending on Your OS, Please download one of these https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers[drivers] and install it.
+Your machine should now be able to recognize the board after connecting it via USB.
+
+Nevertheless You won't see the device on first sight, which leads us to the next chapter.
 
 === Finding the Device File
+
+=== Firmware
 
 === Access to the Serial Port
 
