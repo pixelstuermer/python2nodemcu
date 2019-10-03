@@ -4,7 +4,8 @@
 :toc-title:
 
 image:https://img.shields.io/github/license/pixelstuermer/python2nodemcu[link=LICENSE]
-image:https://img.shields.io/badge/python-3.7.4-blue[link=https://www.python.org/downloads/release/python-374/]
+image:https://img.shields.io/badge/python-3.7.4-blue[link=https://www.python.org/downloads/release/python-374]
+image:https://img.shields.io/badge/board-NodeMcu-blue[link=https://www.nodemcu.com]
 image:https://github.com/pixelstuermer/python2nodemcu/workflows/AsciiDoc%20to%20PDF/badge.svg[link=https://github.com/pixelstuermer/python2nodemcu/actions]
 
 [discrete]
@@ -19,8 +20,10 @@ I somehow found it puzzling that developing and uploading Python scripts for tho
 
 While researching and trying different things I consulted several resources because none of them was, what I would call, an end-to-end documentation.
 This document therefore tries to summarize and provide the lessons I've learned from it.
+Furthermore, it is an approach to get started with hacking as fast as possible, instead of entering too many technical depths.
+
 Please see the following table of contents to get insights of the structure and subjects.
-Please also note that it is based on MacOS Sierra and the https://www.nodemcu.com/index_en.html[NodeMcu board].
+Please also note that it is based on MacOS Sierra and the https://www.nodemcu.com[NodeMcu board].
 
 toc::[]
 
