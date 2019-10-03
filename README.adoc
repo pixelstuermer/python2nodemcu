@@ -77,7 +77,7 @@ Nevertheless You won't see the device on first sight, which leads us to the next
 
 Device files are a concept to separate client programs from specific device drivers (which then interact with the actual devices).
 So they provide interfaces to communicate with devices (which they represent), such as the microcontroller.
-Hence, they can be seen as portals to the device drivers and therefore to the devices themselves.
+Hence, they can be seen as portals to the device drivers and therefore to the physical devices themselves.
 
 They also follow the unix principle of everything being a file.
 Writing data to the device file means passing data to the device driver which then sends the data to the actual physical device.
@@ -98,7 +98,9 @@ The result will then be similar to this:
 
 ```sh
 ...
+...
 /dev/tty.wchusbserialfd130
+...
 ...
 ```
 
