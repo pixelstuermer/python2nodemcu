@@ -280,6 +280,9 @@ Assuming You already have a Python script named `main.py`, this command will cop
 python3 ampy/cli.py --port /dev/tty.wchusbserialfd130 --baud 115200 put main.py
 ```
 
+You maybe have to restart the device manually.
+But then You should be able to view the console output of the script via the already explained `screen` command.
+
 === boot.py and main.py
 
 After flashing the plain MicroPython firmware, the Ampy `ls` command will already list a file named `/boot.py`.
@@ -292,7 +295,17 @@ So once the MicroPython-based board has power, the `/main.py` will always run au
 
 == Samples
 
+The following code samples make it easy to get in touch with Python-based scripts on the NodeMcu.
+
 === Counter
+
+The first script is a plain counter, printing its iteration to the console.
+The good thing about it is: No additional hardware or electrical engineering skills are required :smirk:.
+
+[source,python]
+----
+include::samples/counter/main.py[]
+----
 
 === LED
 
