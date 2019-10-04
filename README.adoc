@@ -207,7 +207,7 @@ If the device was printing any output to the console, this would now be visible.
 But since We recently flashed a pure firmware image, nothing will be observable.
 It might be necessary to hit `[Enter]` or `[CTRL-C]` once or twice before continuing.
 
-For testing purposes, now simply run the following two python commands:
+For testing purposes, now simply run the following two Python commands:
 
 ```python
 >>> import os
@@ -224,6 +224,30 @@ Executing commands with the REPL prompt is good for testing the connection and f
 This leads Us to the next chapter on how to develop scripts and upload files to the NodeMcu.
 
 === Developing Scripts
+
+Developing Python scripts can be done using literally any text editor but a more convenient way is to use an IDE, such as https://www.jetbrains.com/idea[IntelliJ] or https://www.jetbrains.com/pycharm[PyCharm].
+When using IntelliJ, the https://plugins.jetbrains.com/plugin/7322-python-community-edition[Python Community Edition] plugin is recommended to ease the development of Python scripts.
+Both IDEs also support the https://plugins.jetbrains.com/plugin/9777-micropython[MicroPython] plugin (https://github.com/vlasovskikh/intellij-micropython[open source]).
+
+For using the MicroPython plugin with IntelliJ, the following setup is required beforehand:
+
+* Select `File > Project Structure`
+** Go to `Facets`, add (`+`) MicroPython, select Your project module and click `OK`
+** Then set the `Device Type` to `ESP8266` and the `Device Path` to Your device file (e.g. `/dev/tty.wchusbserialfd130`), click `Apply` and `OK`
+
+The plugin now provides support for devices running the MicroPython firmware because it offers:
+
+* Code completion and documentation for ESP8266 and MicroPython modules
+* Uploading and executing Python files right from the IDE to the device
+** Go to `Run > Edit Configurations > Add New Configuration > MicroPython`
+** Now specify the script You want to upload within the `Path` field
+** Click `OK` and run the configuration
+** The script will now be uploaded to the device (You maybe need to restart it manually)
+* Running a REPL prompt within the IDE
+** Go to `Tools > MicroPython` and select `MicroPython REPL`
+** Now insert Your Python commands (as already explained in the previous chapter) or view the console output
+
+Nevertheless it does not support flashing images, such as MicroPython firmware itself.
 
 === Uploading Scripts
 
