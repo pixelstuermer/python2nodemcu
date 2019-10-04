@@ -347,8 +347,19 @@ while True:
     time.sleep(2.0
 ```
 
-Once again, this results an a very predictable output (next to the LED behaving like a christmas tree):
+Once again, this results an a very predictable output (next to the LED behaving like a christmas tree :christmas_tree:):
 
 image::resources/images/led-example-output.gif[]
 
 == Links and Resources
+
+For more detailed information, see the following resources.
+
+* https://github.com/nodemcu/nodemcu-devkit/wiki/Getting-Started-on-OSX
+* https://learn.adafruit.com/micropython-basics-load-files-and-run-code/file-operations
+* https://cityos-air.readme.io/docs/1-mac-os-usb-drivers-for-nodemcu
+* https://www.instructables.com/id/Get-Started-with-ESP8266-Using-AT-Commands-NodeMCU
+* https://www.digikey.com/en/maker/projects/micropython-basics-load-files-run-code/fb1fcedaf11e4547943abfdd8ad825ce
+* https://blog.lucas-hild.de/micropython
+* https://philipp-weissmann.de/python-auf-dem-esp8266
+* https://www.androegg.de/?page_id=613
