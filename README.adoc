@@ -26,7 +26,7 @@ Furthermore, it is an approach to get started with hacking as fast as possible, 
 
 Please see the following table of contents to get insights of the structure and subjects.
 Please also note that it is based on MacOS (Sierra), https://www.python.org/downloads/release/python-374[Python 3.7.4] and the https://www.nodemcu.com/index_en.html[NodeMcu board].
-Moreover, the Python packages are installed using the manual fashion.
+Moreover, the Python packages in this tutorial will be installed using the manual fashion.
 Nevertheless, there are other options to install packages, such as https://pypi.org/project/pip/[Pip].
 
 toc::[]
@@ -38,10 +38,10 @@ The System-on-a-chip adds several convenient features, such as more GPIO pins or
 It is therefore a https://github.com/nodemcu/nodemcu-devkit-v1.0[hardware development kit] for the NodeMcu firmware.
 But as just mentioned, it is also an https://github.com/nodemcu/nodemcu-firmware[open source firmware] which runs on the board by default, enabling You to program it using Lua or C++.
 
-The commands are sent to the board via a device file, using the serial UART interface.
-For an appropriate power supply, please use proper USB cables and avoid USB hubs.
+Commands and data are sent to the board via a device file, using the serial UART interface.
+For an appropriate power supply (and for successful file uploads), please use proper USB cables and avoid USB hubs.
 
-The development kit all in all enables You to, for example, address the GPIO pins and it allows communication with connected components, such as sensors (in) and actuators (out).
+The development kit all in all enables You to, for example, address the GPIO pins and it hereby allows communication with connected components, such as sensors (in) and actuators (out).
 Due to the low cost and easy setup it is very well suited for IoT projects.
 
 == Prerequisites
@@ -68,12 +68,12 @@ If not, please install Python 3 as described https://www.python.org/downloads/re
 === Driver
 
 Next, the appropriate SiLabs driver must be installed to enable serial USB-to-UART communication with the microcontroller.
-Depending on Your operating system, Please download one of these https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers[drivers] and install it.
+Depending on Your operating system, please download one of these https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers[drivers] and install it.
 Your machine should now be able to recognize the board after connecting it via USB.
 
 Nevertheless You won't see the device on first sight, which leads us to the next chapter.
 
-=== Finding the Device File
+=== Finding the particular Device File
 
 Device files are a concept to separate client programs from specific device drivers (which then interact with the actual devices).
 So they provide interfaces to communicate with devices (which they represent), such as the microcontroller.
@@ -83,7 +83,7 @@ They also follow the unix principle of everything being a file.
 Writing data to the device file means passing data to the device driver which then sends the data to the actual physical device.
 
 The device files are located in the `/dev` directory, but We still need to figure out which device file represents the microcontroller.
-This differs according to the installed driver and the operating system.
+This differs according to the operating system and the installed driver.
 
 Executing the following command will only list a subset of device files, of which one should represent the microcontroller in question:
 
@@ -91,16 +91,14 @@ Executing the following command will only list a subset of device files, of whic
 ls -la /dev/tty.*
 ```
 
-Plugging and unplugging the physical device via USB while executing the command should therefore result in different outputs.
+Plugging and unplugging the physical device via USB while executing the command several times should therefore result in different outputs.
 Like this, the device file of the microcontroller can be easily discovered.
 
 The result will then be similar to this:
 
 ```sh
 ...
-...
 /dev/tty.wchusbserialfd130
-...
 ...
 ```
 
