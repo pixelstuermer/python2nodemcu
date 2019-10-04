@@ -1,9 +1,6 @@
 name: AsciiDoc to PDF
 
-on:
-  push:
-    branches:
-      - master
+on: push
 
 jobs:
   asciidoc_to_pdf:
@@ -24,8 +21,15 @@ jobs:
         run: asciidoctor-pdf README.adoc
       - name: Rename generated PDF
         run: mv README.pdf python2nodemcu.pdf
-      - name: Publish PDF
+      - name: Publish PDF to Release Artifacts
         uses: actions/upload-artifact@master
         with:
           name: python2nodemcu
           path: python2nodemcu.pdf
+      - name: Publish PDF to Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: python2nodemcu.pdf
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
