@@ -353,13 +353,13 @@ image::resources/images/led-example-output.gif[]
 
 == Links and Resources
 
-For more detailed information, see the following resources.
+For more detailed information, see the following resources:
 
-* https://github.com/nodemcu/nodemcu-devkit/wiki/Getting-Started-on-OSX
-* https://learn.adafruit.com/micropython-basics-load-files-and-run-code/file-operations
-* https://cityos-air.readme.io/docs/1-mac-os-usb-drivers-for-nodemcu
-* https://www.instructables.com/id/Get-Started-with-ESP8266-Using-AT-Commands-NodeMCU
-* https://www.digikey.com/en/maker/projects/micropython-basics-load-files-run-code/fb1fcedaf11e4547943abfdd8ad825ce
-* https://blog.lucas-hild.de/micropython
-* https://philipp-weissmann.de/python-auf-dem-esp8266
-* https://www.androegg.de/?page_id=613
+* https://github.com/nodemcu/nodemcu-devkit/wiki/Getting-Started-on-OSX[Getting Started on OSX]
+* https://blog.lucas-hild.de/micropython[Python auf dem ESP8266 (MicroPython)]
+* https://philipp-weissmann.de/python-auf-dem-esp8266[Python auf dem ESP8266]
+* https://www.digikey.com/en/maker/projects/micropython-basics-load-files-run-code/fb1fcedaf11e4547943abfdd8ad825ce[MicroPython Basics: Load Files & Run Code]
+* https://www.androegg.de/?page_id=613[Die grundlegende Funktionsweise des ESPTool]
+* https://www.instructables.com/id/Get-Started-with-ESP8266-Using-AT-Commands-NodeMCU[Get Started With ESP8266 Using AT Commands, NodeMCU, or Arduino (ESP-12E)]
+* https://cityos-air.readme.io/docs/1-mac-os-usb-drivers-for-nodemcu[USB Drivers for NodeMCU v1.0]
+* https://learn.adafruit.com/micropython-basics-load-files-and-run-code/file-operations[File Operations]
