@@ -302,10 +302,17 @@ The following code samples make it easy to get in touch with Python-based script
 The first script is a plain counter, printing its iteration to the console.
 The good thing about it is: No additional hardware or electrical engineering skills are required :smirk:.
 
-[source,python]
-----
-include::./samples/counter/main.py[]
-----
+```python
+import time
+
+SLEEP = 1.0
+counter = 0
+
+while True:
+    counter += 1
+    print("Iteration # " + str(counter))
+    time.sleep(SLEEP)
+```
 
 === LED
 
