@@ -280,8 +280,8 @@ Assuming You already have a Python script named `main.py`, this command will cop
 python3 ampy/cli.py --port /dev/tty.wchusbserialfd130 --baud 115200 put main.py
 ```
 
-You maybe have to restart the device manually.
-But then You should be able to view the console output of the script via the already explained `screen` command.
+You maybe have to restart the device manually now.
+But then You should be able to view the console output of the `main.py` script via the already explained `screen` command.
 
 === boot.py and main.py
 
