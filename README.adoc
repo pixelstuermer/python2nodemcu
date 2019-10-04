@@ -118,9 +118,79 @@ It is a cloud build service for the NodeMcu firmware, automatically building a t
 
 == Start Hacking
 
-=== Access to the Serial Port
+After these preparations We now have an up-to-date Python version, a proper driver to communicate with the board, a firmware to execute Python scripts with and We know where to find the device file.
 
-=== Flashing the MicroPython Firmware
+=== Flashing the Firmware
+
+For flashing the NodeMcu with the MicroPython (or any other) firmware image, the Python-based command-line library https://github.com/espressif/esptool[ESPTool] will be utilized.
+The latest https://github.com/espressif/esptool/releases[release] must therefore be downloaded and unzipped.
+
+The installation can then be done with the following command:
+
+```sh
+sudo python3 setup.py install
+```
+
+Being ready to flash images by that time would be too easy, because ESPTool depends on another Python library called PySerial.
+This library enables ESPTool to do serialized communication with the microcontroller device.
+
+Hence, We first need to enable Python to access the serial UART port before actually flashing the board with any firmware image.
+This is done by installing the https://github.com/pyserial/pyserial[PySerial] library.
+
+Please download the latest https://github.com/pyserial/pyserial/releases[release], unzip it and run the following command again:
+
+```sh
+sudo python3 setup.py install
+```
+
+We are now ready to reset the flash of the microcontroller to erase its current firmware.
+Please first connect the physical device via USB and then run the following command:
+
+```sh
+python3 esptool.py --port /dev/tty.wchusbserialfd130 erase_flash
+```
+
+This should lead to an output similar to this:
+
+```sh
+Serial port /dev/tty.wchusbserialfd130
+Connecting....
+Detecting chip type... ESP8266
+Chip is ESP8266EX
+...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 8.5s
+Hard resetting via RTS pin...
+```
+
+To flash MicroPython (or any other firmware) We then execute the following command.
+Keep in mind to replace the path (and name) of the binary with Your custom one (the same applies to the device file name):
+
+```sh
+python3 esptool.py --port /dev/tty.wchusbserialfd130 write_flash 0x00000 esp8266-20190529-v1.11.bin
+```
+
+When having trouble, the baud rate can explicitly be set using the `--baud` parameter.
+This can differ according to the used cable, microcontroller, etc.
+
+Otherwise, the command results in the following output:
+
+```sh
+Serial port /dev/tty.wchusbserialfd130
+Connecting....
+Detecting chip type... ESP8266
+Chip is ESP8266EX
+...
+Configuring flash size...
+Auto-detected Flash size: 4MB
+Flash params set to 0x0040
+Compressed 617880 bytes to 402086...
+Wrote 617880 bytes (402086 compressed) at 0x00000000 in 35.9 seconds (effective 137.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin..
+```
 
 === Connecting to the Board
 
