@@ -164,7 +164,7 @@ Hard resetting via RTS pin...
 ```
 
 To flash MicroPython (or any other firmware) We then execute the following command.
-Keep in mind to replace the path (and name) of the binary with Your custom one (the same applies to the device file name):
+Keep in mind to replace the path (and name) of the binary with Your custom one (the same applies to the device file name of course):
 
 ```sh
 python3 esptool.py --port /dev/tty.wchusbserialfd130 write_flash 0x00000 esp8266-20190529-v1.11.bin
@@ -173,7 +173,7 @@ python3 esptool.py --port /dev/tty.wchusbserialfd130 write_flash 0x00000 esp8266
 When having trouble, the baud rate can explicitly be set using the `--baud` parameter.
 This can differ according to the used cable, microcontroller, etc.
 
-Otherwise, the command results in the following output:
+Otherwise the command results in the following output:
 
 ```sh
 Serial port /dev/tty.wchusbserialfd130
