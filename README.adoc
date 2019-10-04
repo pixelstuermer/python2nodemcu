@@ -71,7 +71,7 @@ Next, the appropriate SiLabs driver must be installed to enable serial USB-to-UA
 Depending on Your operating system, please download one of these https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers[drivers] and install it.
 Your machine should now be able to recognize the board after connecting it via USB.
 
-Nevertheless You won't see the device on first sight, which leads us to the next chapter.
+Nevertheless You won't see the device on first sight, which leads Us to the next chapter.
 
 === Finding the particular Device File
 
@@ -192,9 +192,36 @@ Leaving...
 Hard resetting via RTS pin..
 ```
 
-=== Connecting to the Board
+=== Connecting to the Board and Running Commands
 
-=== Running Commands on the Board
+Establishing a serial connection to the board is pretty straightforward on Linux and Mac and can be done using the `screen` command.
+This opens an interactive MicroPython REPL prompt, with which Python commands can directly be executed on the device.
+
+First run the following command to connect to the microcontroller with the default baud rate of `115200`:
+
+```sh
+screen /dev/tty.wchusbserialfd130 115200
+```
+
+If the device was printing any output to the console, this would now be visible.
+But since We recently flashed a pure firmware image, nothing will be observable.
+It might be necessary to hit `[Enter]` or `[CTRL-C]` once or twice before continuing.
+
+For testing purposes, now simply run the following two python commands:
+
+```python
+>>> import os
+>>> os.uname()
+```
+
+This code gets executed right on the device and leads to an output like the following:
+
+```sh
+(sysname='esp8266', nodename='esp8266', release='2.2.0-dev(9422289)', version='v1.11-8-g48dcbbe60 on 2019-05-29', machine='ESP module with ESP8266')
+```
+
+Executing commands with the REPL prompt is good for testing the connection and for experimenting but definitely not for running any more complex production code.
+This leads Us to the next chapter on how to develop scripts and upload files to the NodeMcu.
 
 === Developing Scripts
 
