@@ -293,9 +293,9 @@ If this file exists, it will be executed after `/boot.py` has finished.
 It therefore represents the place where Your main code must be placed, which will be executed after every start/restart of the device.
 So once the MicroPython-based board has power, the `/main.py` will always run automatically.
 
-== Samples
+== Examples
 
-The following code samples make it easy to get in touch with Python-based scripts on the NodeMcu.
+The following code examples make it easy to get in touch with Python-based scripts on the NodeMcu.
 
 === Counter
 
@@ -313,6 +313,10 @@ while True:
     print("Iteration # " + str(counter))
     time.sleep(SLEEP)
 ```
+
+Which obviously results in the following output:
+
+image::resources/images/counter-example-output.gif[]
 
 === LED
 
