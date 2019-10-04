@@ -300,7 +300,7 @@ The following code examples make it easy to get in touch with Python-based scrip
 === Counter
 
 The first script is a plain counter, printing its iteration to the console.
-The good thing about it is: No additional hardware or electrical engineering skills are required :smirk:.
+The good thing about it is: No additional hardware components or electrical engineering skills are required :smirk:.
 
 ```python
 import time
@@ -319,5 +319,31 @@ Which obviously results in the following output:
 image::resources/images/counter-example-output.gif[]
 
 === LED
+
+The second code snippet needs some hardware, because only with sensors and actuators the IoT-suited microcontrollers become fun :rocket:!
+Yet, the required components are pretty straightforward.
+Please have a look at the following board layout.
+
+image::resources/images/led-example-board-layout.png[]
+
+As You can see, only a LED, some cables and a resistor are required.
+After wiring it all together (as shown above), the code to blink the LED will look like this:
+
+```python
+import time
+import machine
+
+# Pin D1 is mapped to GPIO 5
+ledPin = machine.Pin(5, machine.Pin.OUT)
+
+while True:
+    ledPin.on()
+    print("LED is on")
+    time.sleep(2.0)
+
+    ledPin.off()
+    print("LED is off")
+    time.sleep(2.0
+```
 
 == Links and Resources
