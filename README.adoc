@@ -304,7 +304,7 @@ The good thing about it is: No additional hardware or electrical engineering ski
 
 [source,python]
 ----
-include::samples/counter/main.py[]
+include::./samples/counter/main.py[]
 ----
 
 === LED
