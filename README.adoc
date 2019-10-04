@@ -249,7 +249,7 @@ The plugin now provides support for devices running the MicroPython firmware bec
 
 Nevertheless it does not support flashing images, such as MicroPython firmware itself.
 
-=== Uploading Scripts
+=== Uploading Scripts to the Device
 
 Next to this plugin, there also exists an alternative way to upload Python scripts.
 The also Python-based https://github.com/scientifichackers/ampy[Ampy] library enables You to view or upload files to the MicroPython-based NodeMcu (next to https://learn.adafruit.com/micropython-basics-load-files-and-run-code/file-operations[multiple other options]).
@@ -274,7 +274,7 @@ python3 ampy/cli.py --port /dev/tty.wchusbserialfd130 --baud 115200 get main.py
 ```
 
 Nevertheless, the most interesting command is the one to upload (Python) files to the board.
-Assuming You already have a Python script named `main.py`, this one does the trick:
+Assuming You already have a Python script named `main.py`, this command will copy it to the board:
 
 ```sh
 python3 ampy/cli.py --port /dev/tty.wchusbserialfd130 --baud 115200 put main.py
