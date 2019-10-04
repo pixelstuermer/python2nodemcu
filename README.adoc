@@ -347,9 +347,22 @@ while True:
     time.sleep(2.0
 ```
 
-Once again, this results an a very predictable output (next to the LED behaving like a christmas tree :christmas_tree:):
+Once again, this results an a very predictable output (next to the LED behaving like a christmas tree): :christmas_tree:
 
 image::resources/images/led-example-output.gif[]
+
+== Other helpful Software
+
+Both of the following tools are great for checking connections and for debugging (e.g. viewing console outputs).
+
+=== ESPLorer
+
+https://esp8266.ru/esplorer[ESPLorer] is a Java-based https://github.com/4refr0nt/ESPlorer[open source] IDE for developing with ESP or NodeMcu boards.
+Additionally, it also allows uploading files, executing commands on the board and viewing the console output via the serial port.
+
+=== CoolTherm
+
+CoolTherm, which can be downloaded https://freeware.the-meiers.org[here], also establishes a connection to the board via its serial port.
 
 == Links and Resources
 
