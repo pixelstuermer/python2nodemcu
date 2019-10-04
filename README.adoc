@@ -280,6 +280,16 @@ Assuming You already have a Python script named `main.py`, this command will cop
 python3 ampy/cli.py --port /dev/tty.wchusbserialfd130 --baud 115200 put main.py
 ```
 
+=== boot.py and main.py
+
+After flashing the plain MicroPython firmware, the Ampy `ls` command will already list a file named `/boot.py`.
+It represents the boot script – the file which is run right after the device is powered up or reset.
+
+Next, MicroPython scans the root of its file system for a file named `/main.py`.
+If this file exists, it will be executed after `/boot.py` has finished.
+It therefore represents the place where Your main code must be placed, which will be executed after every start/restart of the device.
+So once the MicroPython-based board has power, the `/main.py` will always run automatically.
+
 == Samples
 
 === Counter
