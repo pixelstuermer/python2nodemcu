@@ -108,8 +108,10 @@ Therefore, please replace `/dev/tty.wchusbserialfd130` in the following code exa
 === MicroPython Firmware
 
 To be able to execute Python scripts on the board, the https://micropython.org[MicroPython] firmware is required.
-It is an https://github.com/micropython/micropython[open source] Python compiler and runtime adopted to run on microcontrollers and it therefore offers an alternative to the classic Lua or C++ NodeMcu development.
+It is an https://github.com/micropython/micropython[open source] Python compiler and runtime (adopted to run on microcontrollers) and it therefore offers an alternative to the classic Lua or C++ NodeMcu development.
+
 The latest firmware, including for example libraries for network or GPIO pin access, can be downloaded http://micropython.org/download#esp8266[here].
+Do so and save the binary on Your file system.
 
 === Access to the Serial Port
 
