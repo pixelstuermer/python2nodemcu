@@ -255,7 +255,7 @@ Next to this plugin, there also exists an alternative way to upload Python scrip
 The also Python-based https://github.com/scientifichackers/ampy[Ampy] library enables You to view or upload files to the MicroPython-based NodeMcu (next to https://learn.adafruit.com/micropython-basics-load-files-and-run-code/file-operations[multiple other options]).
 In general, the CLI tool enables You to interact with MicroPython-based devices over its serial connection.
 
-Download the latest https://github.com/scientifichackers/ampy/release[release], unzip it and once again run the following command:
+Download the latest https://github.com/scientifichackers/ampy/releases[release], unzip it and once again run the following command:
 
 ```sh
 sudo python3 setup.py install
