@@ -113,11 +113,14 @@ It is an https://github.com/micropython/micropython[open source] Python compiler
 The latest firmware, including for example libraries for network or GPIO pin access, can be downloaded http://micropython.org/download#esp8266[here].
 Do so and save the binary on Your file system.
 
-=== Access to the Serial Port
+If You want to restore the original firmware, just have a look at https://nodemcu-build.com[this] website.
+It is a cloud build service for the NodeMcu firmware, automatically building a tailored firmware for You.
 
 == Start Hacking
 
-=== Flashing the Firmware
+=== Access to the Serial Port
+
+=== Flashing the MicroPython Firmware
 
 === Connecting to the Board
 
