@@ -314,20 +314,21 @@ while True:
     time.sleep(SLEEP)
 ```
 
-Which obviously results in the following output:
+This obviously results in the following output:
 
 image::resources/images/counter-example-output.gif[]
 
 === LED
 
-The second code snippet needs some hardware, because only with sensors and actuators the IoT-suited microcontrollers become fun :rocket:!
+The second code snippet needs some additional hardware, because only with sensors and actuators the IoT-suited microcontrollers become fun :rocket:!
 Yet, the required components are pretty straightforward.
+
 Please have a look at the following board layout.
 
 image::resources/images/led-example-board-layout.png[]
 
 As You can see, only a LED, some cables and a resistor are required.
-After wiring it all together (as shown above), the code to blink the LED will look like this:
+After wiring it all together (as shown above), the code to let the LED blink will look like this:
 
 ```python
 import time
